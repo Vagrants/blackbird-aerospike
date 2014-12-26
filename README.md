@@ -11,6 +11,10 @@ Get Aerospike information.
 * `asinfo -v get-config`
 * and more
 
+## low level discovery
+
+`blackbird-aerospike` module discovers namespace and set.
+
 ## attention
 
 This module needs `citrusleaf` python module.  
