@@ -11,6 +11,22 @@ Get Aerospike information.
 * `asinfo -v get-config`
 * and more
 
+## adding monitoring user for blackbird-aerospike
+
+If your aerospike cluster is set `enable-security true`, you need to create user for monitoring.  
+This is example for creating `monitor` user.
+
+```sql
+aql> CREATE USER monitor PASSWORD monitor ROLES read
+```
+
+and set `/etc/blackbird/conf.d/aerospike.cfg` like this.
+
+```
+asuser = monitor
+aspass = monitor
+```
+
 ## low level discovery
 
 `blackbird-aerospike` module discovers namespace and set.
