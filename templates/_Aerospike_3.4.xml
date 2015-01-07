@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-01-05T12:01:45Z</date>
+    <date>2015-01-07T08:39:52Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -16715,12 +16715,26 @@ none = Used only for dynamically changing protocol</description>
                     <macro>{$TRG_AS_SETS_AVAILABLE_PCT}</macro>
                     <value>80</value>
                 </macro>
+                <macro>
+                    <macro>{$TRG_BBD_AS_NODATA_PRD}</macro>
+                    <value>600</value>
+                </macro>
             </macros>
             <templates/>
             <screens/>
         </template>
     </templates>
     <triggers>
+        <trigger>
+            <expression>{_Aerospike_3.4:blackbird.aerospike.ping.nodata({$TRG_BBD_AS_NODATA_PRD})}=1</expression>
+            <name>Blackbird - Blackbird aerospike plugin is not sending data</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
         <trigger>
             <expression>({_Aerospike_3.4:net.tcp.listen[{$ITM_AS_FABRIC_PORT}].last()}=0)|({_Aerospike_3.4:net.tcp.service[tcp,,{$ITM_AS_FABRIC_PORT}].max(60)}=0)</expression>
             <name>General - Aerospike fabric port might be down</name>
