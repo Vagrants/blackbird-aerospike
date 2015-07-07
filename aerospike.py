@@ -20,7 +20,7 @@ try:
     import citrusleaf
 except ImportError:
     raise base.BlackbirdPluginError(
-        'citrusleaf.py not in your python path.'
+        'citrusleaf.py is not found in your python path.'
     )
 
 
