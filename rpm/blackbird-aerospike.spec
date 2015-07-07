@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 %define name blackbird-aerospike
-%define version 0.1.0
-%define unmangled_version 0.1.0
+%define version 0.1.1
+%define unmangled_version 0.1.1
 %define release 1
 
 %define blackbird_conf_dir /etc/blackbird/conf.d
@@ -47,5 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Tue Jul  7 2015 makocchi <makocchi@gmail.com> - 0.1.1-1
+- add aerospike python library path
+
 * Wed Dec 25 2014 makocchi <makocchi@gmail.com> - 0.1.0-1
 - first package
