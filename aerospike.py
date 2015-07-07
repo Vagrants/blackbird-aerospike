@@ -5,11 +5,15 @@ IMPORTANT
  - please install "aerospike-tools" or citrusleaf python module.
 """
 
-__VERSION__ = '0.1.0'
+__VERSION__ = '0.1.1'
 
 import types
+import sys
 
 from blackbird.plugins import base
+
+# add aerospike python library path
+sys.path.append('/opt/aerospike/lib/python')
 
 try:
     # pylint: disable=import-error
