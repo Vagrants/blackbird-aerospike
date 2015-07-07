@@ -39,7 +39,7 @@ So please install `aerospike-tools` or place `citrusleaf.py` to your python `sys
 `aerospike-tools` places `daemon.py` to `/opt/aerospike/lib/python/`, so `python-daemon` conflicts this aerospike's daemon.py.  
 Please rename `/opt/aerospike/lib/python/daemon.py` for running blackbird.
 
-
+(this issue resolved by Aerospike 3.4.1)
 
 
 
