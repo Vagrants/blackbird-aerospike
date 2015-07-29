@@ -5,7 +5,7 @@ IMPORTANT
  - please install "aerospike-tools" or citrusleaf python module.
 """
 
-__VERSION__ = '0.1.1'
+__VERSION__ = '0.1.2'
 
 import types
 import sys
