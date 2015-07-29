@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='blackbird-aerospike',
-    version='0.1.1',
+    version='0.1.2',
     description=(
         'get aerospike information.'
     ),

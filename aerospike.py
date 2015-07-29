@@ -5,7 +5,7 @@ IMPORTANT
  - please install "aerospike-tools" or citrusleaf python module.
 """
 
-__VERSION__ = '0.1.1'
+__VERSION__ = '0.1.2'
 
 import types
 import sys
@@ -161,7 +161,7 @@ class ConcreteJob(base.JobBase):
 
         for histgram in histgrams:
             _item_key = 'aerospike.asinfo.latency.{hst}'.format(hst=histgram)
-            _cmd = 'latency:{hst}'.format(hst=histgram)
+            _cmd = 'latency:hist={hst}'.format(hst=histgram)
             _data = self._as_connect(cmd=_cmd).split(';')
             _ops = zip(_data[0].split(',')[1:], _data[1].split(',')[1:])
 
