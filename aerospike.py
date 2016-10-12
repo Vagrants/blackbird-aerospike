@@ -5,7 +5,7 @@ IMPORTANT
  - please install "aerospike-tools" or citrusleaf python module.
 """
 
-__VERSION__ = '0.1.2'
+__VERSION__ = '0.1.3'
 
 import types
 import sys
@@ -156,7 +156,7 @@ class ConcreteJob(base.JobBase):
         """
 
         histgrams = [
-            'reads', 'writes_master', 'writes_reply', 'proxy', 'udf', 'query'
+            'reads', 'writes_master', 'proxy', 'udf', 'query'
         ]
 
         for histgram in histgrams:

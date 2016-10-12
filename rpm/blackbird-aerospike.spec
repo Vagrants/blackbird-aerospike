@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 %define name blackbird-aerospike
-%define version 0.1.2
-%define unmangled_version 0.1.2
+%define version 0.1.3
+%define unmangled_version 0.1.3
 %define release 1
 
 %define blackbird_conf_dir /etc/blackbird/conf.d
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Wed Oct 12 2016 makocchi <makocchi@gmail.com> - 0.1.3-1
+- remove writes_reply from latency
+
 * Wed Jul 29 2015 makocchi <makocchi@gmail.com> - 0.1.2-1
 - fix latency cmd
 
